@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_filter :authorize, except: [:index, :show]
+  load_and_authorize_resource
 
   # GET /posts
   # GET /posts.json
