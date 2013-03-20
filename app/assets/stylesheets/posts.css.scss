@@ -1,7 +1,38 @@
+$papayawhip: darken(papayawhip, 10%);
+$yellow: lighten(#eee, 50%);
+$cyan: lighten(#999, 10%);
+
 body {
   font-family: Verdana, sans-serif;
 }
 
-a {
-  @include button;
+// poor man's reset
+* {
+  padding: 0px;
+  margin: 0px;
 }
+
+header {
+  @include linear-gradient($yellow, $cyan);
+  padding: 10px;
+}
+
+@mixin button-base {
+  color: white;
+  font-weight: bold;
+}
+
+@mixin button-red {
+  @include button-base;
+  @include button(red);
+}
+
+@mixin button-blue {
+  @include button-base;
+  @include button(blue);
+}
+
+.button-blue {
+  @include button-blue;
+}
+
