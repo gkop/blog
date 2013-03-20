@@ -15,9 +15,9 @@
     <td><%= post.name %></td>
     <td><%= post.title %></td>
     <td><%= post.content %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) if can?(:edit, post) %></td>
-    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } if can?(:destroy, post) %></td>
+    <td><%= link_to 'Show', post, :class => "button-blue"  %></td>
+    <td><%= link_to 'Edit', edit_post_path(post), :class => "button-blue"  if can?(:edit, post) %></td>
+    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'button-dangerous' if can?(:destroy, post) %></td>
   </tr>
 <% end %>
 </table>

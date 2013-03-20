@@ -19,6 +19,7 @@ header {
 
 @mixin button-base {
   color: white;
+  font-size: 18px !important;
   font-weight: bold;
 }
 
@@ -36,3 +37,6 @@ header {
   @include button-blue;
 }
 
+.button-dangerous {
+  @include button-red;
+}
