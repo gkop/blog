@@ -2,6 +2,7 @@ set :application, "blog"
 set :repository,  "https://github.com/gkop/blog"
 set :host, "ec2-54-215-222-193.us-west-1.compute.amazonaws.com"
 set :user, "ubuntu"
+set :deploy_to, "/home/ubuntu/#{application}"
 ssh_options[:keys] = ["/home/gabe2/.ssh/gabe-aws-personal.pem"]
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
