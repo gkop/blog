@@ -1,3 +1,6 @@
+require "bundler/capistrano"
+load "deploy/assets"
+
 set :application, "blog"
 set :repository,  "https://github.com/gkop/blog"
 set :host, "ec2-54-215-222-193.us-west-1.compute.amazonaws.com"
